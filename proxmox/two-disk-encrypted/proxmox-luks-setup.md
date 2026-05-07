@@ -307,8 +307,8 @@ zpool create -o ashift=12 -o autotrim=on \
 # Verificar
 zpool status rpool
 
-# Limitar ARC (con 128GB RAM, dejá memoria para VMs)
-echo "options zfs zfs_arc_max=17179869184" > /etc/modprobe.d/zfs.conf
+# Limitar ARC
+echo "options zfs zfs_arc_max=10737418240" > /etc/modprobe.d/zfs.conf
 update-initramfs -u
 ```
 
